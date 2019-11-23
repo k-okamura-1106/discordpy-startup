@@ -28,7 +28,7 @@ async def makoto_apology(ctx):
     await ctx.send('ごめん、ユイ・・・・！')
 
 @bot.command()
-async def a(ctx *, message: str):
-    await ctx.send()
+async def a(ctx, *, message: str):
+    await ctx.send(message)
 
 bot.run(token)
