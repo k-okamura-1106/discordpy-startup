@@ -9,7 +9,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_ready():
     # 起動時にメッセージの送信
-    channel = client.get_channel(チャンネルID)
+    channel = client.get_channel(634876781073268739)
     await channel.send('起動したのー')
 
 @bot.event
