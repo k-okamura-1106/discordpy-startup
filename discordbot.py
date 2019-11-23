@@ -33,13 +33,4 @@ async def makoto_apology(ctx):
 async def a(ctx, *, message: str):
     await ctx.send(message + 'さんお疲れ様なのー')
 
-@bot.command()
-async def b(ctx):
-    df = pd.DataFrame({
-    'name'    : ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Fred'],
-    'English' : [12, 34, 56, 78, -1, 90],
-    'Math'    : [88, 66, -1, 44, 22, -1]    
-})
-    await ctx.send(df)
-
 bot.run(token)
