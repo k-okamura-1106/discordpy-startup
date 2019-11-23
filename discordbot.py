@@ -27,5 +27,8 @@ async def ping(ctx):
 async def makoto_apology(ctx):
     await ctx.send('ごめん、ユイ・・・・！')
 
+@bot.command()
+async def a(ctx *, message: str):
+    await ctx.send()
 
 bot.run(token)
