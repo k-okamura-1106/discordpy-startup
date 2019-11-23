@@ -5,6 +5,12 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+# 起動時のメッセージ
+@bot.event
+async def on_ready():
+    # 起動時にメッセージの送信
+    channel = client.get_channel(チャンネルID)
+    await channel.send('起動したのー')
 
 @bot.event
 async def on_command_error(ctx, error):
