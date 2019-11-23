@@ -15,5 +15,8 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong!')
 
+async def makoto_apology(ctx):
+    await ctx.send('ごめん、ユイ・・・・！')
+
 
 bot.run(token)
