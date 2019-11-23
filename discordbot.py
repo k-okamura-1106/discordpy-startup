@@ -39,6 +39,6 @@ async def a(ctx, *, message: str):
 
 @bot.command()
 async def b(ctx):
-    await ctx.send(df))
+    await ctx.send(df)
 
 bot.run(token)
