@@ -1,7 +1,13 @@
 from discord.ext import commands
 import os
 import traceback
+import pandas as pd
 
+df = pd.DataFrame({
+    'name'    : ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Fred'],
+    'English' : [12, 34, 56, 78, -1, 90],
+    'Math'    : [88, 66, -1, 44, 22, -1]    
+})
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -10,7 +16,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def on_ready():
     # 起動時にメッセージの送信
     channel = bot.get_channel(634876781073268739)
-    await channel.send('起動したのー')
+    await channel.send('プリン参上なのー')
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -29,6 +35,10 @@ async def makoto_apology(ctx):
 
 @bot.command()
 async def a(ctx, *, message: str):
-    await ctx.send(message)
+    await ctx.send(message + 'さんお疲れ様なのー')
+
+@bot.command()
+async def b(ctx):
+    await ctx.send(df))
 
 bot.run(token)
