@@ -32,12 +32,12 @@ async def makoto_apology(ctx):
 async def a(ctx, *, message: str):
     await ctx.send(message + 'さんお疲れ様なのー')
 
-@bot.command()
-async def b(ctx):
-    file = 'member.csv' #ファイルのパスを指定(2)
-    f = open(file,'r') #ファイルをオープン(3)
-    rows = csv.reader(f) #ファイルからデータを読み込み(4)
-   	await ctx.send(row)
-    f.close() #開いたファイルをクローズ(7)
+#@bot.command()
+#async def b(ctx):
+    #file = 'member.csv' #ファイルのパスを指定(2)
+    #f = open(file,'r') #ファイルをオープン(3)
+    #rows = csv.reader(f) #ファイルからデータを読み込み(4)
+   	#await ctx.send(row)
+    #f.close() #開いたファイルをクローズ(7)
 
 impotbot.run(token)
