@@ -1,10 +1,11 @@
 from discord.ext import commands
 import os
 import traceback
-
+import csv #csvモジュールの読み込み(1)
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+file = 'member.csv' #ファイルのパスを指定(2)
 
 # 起動時のメッセージ
 @bot.event
@@ -32,4 +33,15 @@ async def makoto_apology(ctx):
 async def a(ctx, *, message: str):
     await ctx.send(message + 'さんお疲れ様なのー')
 
-bot.run(token)
+@bot.command()
+async def b(ctx):
+    f = open(file,'r') #ファイルをオープン(3)
+    rows = csv.reader(f) #ファイルからデータを読み込み(4)
+    for row in rows: # for文で行を1つずつ取り出す(5)
+    	await ctx.send(row)
+    f.close() #開いたファイルをクローズ(7)
+    
+
+
+
+impotbot.run(token)
