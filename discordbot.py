@@ -1,7 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
-import csv #csvモジュールの読み込み(1)
+#import csv #csvモジュールの読み込み(1)
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
